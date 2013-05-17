@@ -1,0 +1,3061 @@
+Aug 17, 2011 10:58:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 10:58:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 10:59:12 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 11 in the jsp file: /index.jsp
+DukesDB cannot be resolved to a type
+8: <H3>Apache Tomcat Examples</H3>
+9: 
+10: <% 
+11: DukesDB theDB = new DukesDB();
+12: Searchable[] foundItems = theDB.findItems();
+13: %>
+14: <table border=1 cellpadding=4>
+
+
+An error occurred at line: 11 in the jsp file: /index.jsp
+DukesDB cannot be resolved to a type
+8: <H3>Apache Tomcat Examples</H3>
+9: 
+10: <% 
+11: DukesDB theDB = new DukesDB();
+12: Searchable[] foundItems = theDB.findItems();
+13: %>
+14: <table border=1 cellpadding=4>
+
+
+An error occurred at line: 12 in the jsp file: /index.jsp
+Searchable cannot be resolved to a type
+9: 
+10: <% 
+11: DukesDB theDB = new DukesDB();
+12: Searchable[] foundItems = theDB.findItems();
+13: %>
+14: <table border=1 cellpadding=4>
+15: <tr>
+
+
+An error occurred at line: 19 in the jsp file: /index.jsp
+Searchable cannot be resolved to a type
+16: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+17: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">the dropdown</td>
+18: <%
+19: for (Searchable element: foundItems) {
+20:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+21:    out.println("<td><a href=\"itemDetail.jsp\">" + element.getSku() + "</a></td>" +
+22:                "<td>" + element.getDescription() + "</td>" +
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:00:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 17, 2011 11:00:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Aug 17, 2011 11:00:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 11:00:04 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 11:36:57 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /displayItemDetail.jsp
+DukesDB cannot be resolved to a type
+9: 
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable[] foundItems = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+
+
+An error occurred at line: 12 in the jsp file: /displayItemDetail.jsp
+DukesDB cannot be resolved to a type
+9: 
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable[] foundItems = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+
+
+An error occurred at line: 13 in the jsp file: /displayItemDetail.jsp
+Searchable cannot be resolved to a type
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable[] foundItems = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+
+
+An error occurred at line: 17 in the jsp file: /displayItemDetail.jsp
+Syntax error, insert ")" to complete Expression
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+17: out.print(foundItems[0].getDisplay("<br>" );
+18: 
+19: 
+20: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:37:36 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /displayItemDetail.jsp
+The method findItem(String) is undefined for the type DukesDB
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable[] foundItems = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+
+
+An error occurred at line: 17 in the jsp file: /displayItemDetail.jsp
+Syntax error, insert ")" to complete Expression
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+17: out.print(foundItems[0].getDisplay("<br>" );
+18: 
+19: 
+20: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:12 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /displayItemDetail.jsp
+The method findItem(String) is undefined for the type DukesDB
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable foundItem = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+
+
+An error occurred at line: 17 in the jsp file: /displayItemDetail.jsp
+Syntax error, insert ")" to complete Expression
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+17: out.print(foundItem.getDisplay("<br>" );
+18: 
+19: 
+20: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:13 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.ClassNotFoundException: org.apache.jsp.displayItemDetail_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:134)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:66)
+	at org.apache.jasper.JspCompilationContext.load(JspCompilationContext.java:628)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:149)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:338)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:14 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.ClassNotFoundException: org.apache.jsp.displayItemDetail_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:134)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:66)
+	at org.apache.jasper.JspCompilationContext.load(JspCompilationContext.java:628)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:149)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:338)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:16 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.ClassNotFoundException: org.apache.jsp.displayItemDetail_jsp
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:134)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:66)
+	at org.apache.jasper.JspCompilationContext.load(JspCompilationContext.java:628)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:149)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:338)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:17 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 13 in the jsp file: /displayItemDetail.jsp
+The method findItem(String) is undefined for the type DukesDB
+10: <%
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable foundItem = theDB.findItem(theSKU);
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+
+
+An error occurred at line: 17 in the jsp file: /displayItemDetail.jsp
+Syntax error, insert ")" to complete Expression
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+17: out.print(foundItem.getDisplay("<br>" );
+18: 
+19: 
+20: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:45:27 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 17, 2011 11:45:27 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Aug 17, 2011 11:46:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 11:46:09 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 11:46:17 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 17 in the jsp file: /displayItemDetail.jsp
+Syntax error, insert ")" to complete Expression
+14: //out.println(DBDisplayUtil.getDisplayLines(foundItems, "<br>"));
+15: 
+16: 
+17: out.print(foundItem.getDisplay("<br>" );
+18: 
+19: 
+20: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:48:56 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+Syntax error, insert ")" to complete MethodInvocation
+38: <%
+39: for (Searchable element: foundItems) {
+40:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+41:    out.println("<td><a href=\"displayItemDetail.jsp?SKU="element.getSku()"\">" + element.getSku() + "</a></td>" +
+42:                "<td>" + element.getDescription() + "</td>" +
+43:                "<td>" + element.getPrice() + "</td>" +
+44:                "<td>" + element.getQuantityInStock() + "</td>" +
+
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete BlockStatements
+38: <%
+39: for (Searchable element: foundItems) {
+40:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+41:    out.println("<td><a href=\"displayItemDetail.jsp?SKU="element.getSku()"\">" + element.getSku() + "</a></td>" +
+42:                "<td>" + element.getDescription() + "</td>" +
+43:                "<td>" + element.getPrice() + "</td>" +
+44:                "<td>" + element.getQuantityInStock() + "</td>" +
+
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+The left-hand side of an assignment must be a variable
+38: <%
+39: for (Searchable element: foundItems) {
+40:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+41:    out.println("<td><a href=\"displayItemDetail.jsp?SKU="element.getSku()"\">" + element.getSku() + "</a></td>" +
+42:                "<td>" + element.getDescription() + "</td>" +
+43:                "<td>" + element.getPrice() + "</td>" +
+44:                "<td>" + element.getQuantityInStock() + "</td>" +
+
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+Syntax error on token ")", AssignmentOperator expected after this token
+38: <%
+39: for (Searchable element: foundItems) {
+40:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+41:    out.println("<td><a href=\"displayItemDetail.jsp?SKU="element.getSku()"\">" + element.getSku() + "</a></td>" +
+42:                "<td>" + element.getDescription() + "</td>" +
+43:                "<td>" + element.getPrice() + "</td>" +
+44:                "<td>" + element.getQuantityInStock() + "</td>" +
+
+
+An error occurred at line: 45 in the jsp file: /index.jsp
+Syntax error on token ")", delete this token
+42:                "<td>" + element.getDescription() + "</td>" +
+43:                "<td>" + element.getPrice() + "</td>" +
+44:                "<td>" + element.getQuantityInStock() + "</td>" +
+45:                "</tr>" );
+46: }
+47: 
+48: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 11:57:46 AM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /index.jsp
+sID cannot be resolved
+9: <SCRIPT>
+10: 
+11: // Initialize the PTPortlet object
+12: masterSearchPortlet<%=sID%> = PTPortlet.getPortletByID(<%=sID%>);
+13: 
+14: function getSelection()
+15: {
+
+
+An error occurred at line: 12 in the jsp file: /index.jsp
+sID cannot be resolved
+9: <SCRIPT>
+10: 
+11: // Initialize the PTPortlet object
+12: masterSearchPortlet<%=sID%> = PTPortlet.getPortletByID(<%=sID%>);
+13: 
+14: function getSelection()
+15: {
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:33:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 22 in the jsp file: /index.jsp
+Syntax error, insert ")" to complete Expression
+19: 
+20: <% 
+21: 
+22: out.println(request.getParameter("selection");
+23: 
+24: 
+25: DukesDB theDB = new DukesDB();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:33:35 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 22 in the jsp file: /index.jsp
+Syntax error, insert ")" to complete Expression
+19: 
+20: <% 
+21: 
+22: out.println(request.getParameter("selection");
+23: 
+24: 
+25: DukesDB theDB = new DukesDB();
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:38:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 49 in the jsp file: /index.jsp
+The method findItems(int) in the type DukesDB is not applicable for the arguments (String)
+46: 
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null){
+49: Searchable[] foundItems = theDB.findItems(selection);
+50: for (Searchable element: foundItems) {
+51:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+52:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:39:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 49 in the jsp file: /index.jsp
+The method findItems(int) in the type DukesDB is not applicable for the arguments (String)
+46: 
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null){
+49: Searchable[] foundItems = theDB.findItems(selection);
+50: for (Searchable element: foundItems) {
+51:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+52:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:39:21 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 49 in the jsp file: /index.jsp
+The method findItems(int) in the type DukesDB is not applicable for the arguments (String)
+46: 
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null){
+49: Searchable[] foundItems = theDB.findItems(selection);
+50: for (Searchable element: foundItems) {
+51:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+52:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:41:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:42:36 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems(120);
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems(120);
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems(120);
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:42:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:42:58 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:43:05 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:43:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:43:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:43:21 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+34: <table border=1 cellpadding=4>
+35: <tr>
+36: <td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+37: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+38: <form action="display.jsp">
+39: <select>
+40: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 50 in the jsp file: /index.jsp
+foundItems cannot be resolved
+47: String selection = (request.getParameter("selection"));
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+
+
+An error occurred at line: 51 in the jsp file: /index.jsp
+foundItems cannot be resolved
+48: if (selection!=null)
+49: //{Integer.parseInt(selection));
+50: Searchable[] foundItems = theDB.findItems();
+51: for (Searchable element: foundItems) {
+52:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+53:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+54:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 59 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+56:                "<td>" + element.getQuantityInStock() + "</td>" +
+57:                "</tr>" );
+58: }
+59: }
+60: 
+61: %>
+62: </table>
+
+
+An error occurred at line: 165 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 167 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 167 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 168 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 173 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:45:05 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+38: String selection = (request.getParameter("selection"));
+39: if (selection!=null)
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+foundItems cannot be resolved
+38: String selection = (request.getParameter("selection"));
+39: if (selection!=null)
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+
+
+An error occurred at line: 43 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+45: <select>
+46: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 52 in the jsp file: /index.jsp
+foundItems cannot be resolved
+49: </select>
+50: </form></td>
+51: <%
+52: for (Searchable element: foundItems) {
+53:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+54:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+55:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 60 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+57:                "<td>" + element.getQuantityInStock() + "</td>" +
+58:                "</tr>" );
+59: }
+60: }
+61: 
+62: %>
+63: </table>
+
+
+An error occurred at line: 167 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 171 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 174 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 175 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 12:45:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+Syntax error on token(s), misplaced construct(s)
+38: String selection = (request.getParameter("selection"));
+39: if (selection!=null)
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+
+
+An error occurred at line: 41 in the jsp file: /index.jsp
+foundItems cannot be resolved
+38: String selection = (request.getParameter("selection"));
+39: if (selection!=null)
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+
+
+An error occurred at line: 43 in the jsp file: /index.jsp
+foundItems.length cannot be resolved to a type
+40: //{Integer.parseInt(selection));
+41: Searchable[] foundItems = theDB.findItems();
+42: %>
+43: <tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+44: <form action="display.jsp">
+45: <select>
+46: <% for(Object element:foundItemTypes) { %>
+
+
+An error occurred at line: 52 in the jsp file: /index.jsp
+foundItems cannot be resolved
+49: </select>
+50: </form></td>
+51: <%
+52: for (Searchable element: foundItems) {
+53:    //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+54:    out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+55:                "<td>" + element.getDescription() + "</td>" +
+
+
+An error occurred at line: 60 in the jsp file: /index.jsp
+Syntax error, insert "Finally" to complete TryStatement
+57:                "<td>" + element.getQuantityInStock() + "</td>" +
+58:                "</tr>" );
+59: }
+60: }
+61: 
+62: %>
+63: </table>
+
+
+An error occurred at line: 167 in the generated java file
+Syntax error on token "catch", Identifier expected
+
+An error occurred at line: 169 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 169 in the generated java file
+_jspx_out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 170 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 171 in the generated java file
+out cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 172 in the generated java file
+_jspx_page_context cannot be resolved
+
+An error occurred at line: 174 in the generated java file
+Syntax error on token "finally", { expected
+
+An error occurred at line: 175 in the generated java file
+_jspx_page_context cannot be resolved
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 2:43:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 2:43:10 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 2:54:02 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 28 in the jsp file: /index.jsp
+Type mismatch: cannot convert from int to String
+25: <%
+26: // Find the items based on the selection
+27: String selection = (request.getParameter("selection"));
+28: if (selection != null) selection = -1; // no items have negative id's so foundItems will be empty
+29: // Check to make sure selection is not equal to null (first time on the page)
+30: Searchable[] foundItems = theDB.findItems(Integer.parseInt(selection));
+31: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 2:54:46 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:454)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 2:55:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:454)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 2:55:16 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:454)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 2:55:41 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:454)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:03:06 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:03:09 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:03:30 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:05:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+Incompatible operand types int and String
+34: <select id="itemTypes" onChange="getItem(this);">
+35: <option value="">Select an Item</option>
+36: <% for(Object element:foundItemTypes) { %>
+37: <option <%if (((Searchable)element).getItemID()==selection) out.println(" selected=\"selected\"");%>
+38: value="<%=((Searchable)element).getItemID()%>"><%=((Searchable)element).getDescription()%></option>
+39: <%} %>
+40: </select>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:06:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:07:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.index_jsp._jspService(index_jsp.java:87)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 3:36:41 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 14 in the jsp file: /displayItemDetail.jsp
+The method getItemId() is undefined for the type Searchable
+11: String theSKU = request.getParameter("SKU");
+12: DukesDB theDB = new DukesDB();
+13: Searchable foundItem = theDB.findItem(theSKU);
+14: int theId = foundItem.getItemId();
+15: %>
+16: <img src="images/<%=theId%>.gif">
+17: <%
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 4:45:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 17, 2011 4:45:28 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Aug 17, 2011 7:18:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 7:18:07 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 7:29:05 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 25 in the jsp file: /displayItemDetail.jsp
+The method removeItem(String, int) is undefined for the type Searchable
+22: 
+23: String order = request.getParameter("orders");
+24: if (order!=null) {
+25:     foundItem.removeItem(theSKU, Integer.parseInt(order));
+26: }
+27: 
+28: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:38:43 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:38:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:39:50 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:39:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:40:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:41:49 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:41:56 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:44:00 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:44:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:44:37 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:45:53 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:46:01 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:46:04 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:46:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:46:47 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:70)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:51:22 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 17, 2011 7:51:22 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Aug 17, 2011 7:54:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 7:54:29 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 7:54:35 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 29 in the jsp file: /index.jsp
+The method setupDb() from the type DukesDB is not visible
+26: <% 
+27: // Initialize the DukesDB object
+28: DukesDB theDB = new DukesDB();
+29: theDB.setupDb();
+30: // Find the unique items for the dropdown list
+31: Searchable[] foundItemTypes = theDB.findUniqueItems();
+32: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 7:55:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 17, 2011 7:55:08 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()
+Aug 17, 2011 7:55:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextInitialized()
+Aug 17, 2011 7:55:32 PM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextInitialized()
+Aug 17, 2011 7:55:42 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /displayItemDetail.jsp
+theDB cannot be resolved
+9: <%
+10: String theSKU = request.getParameter("SKU");
+11: //DukesDB theDB = new DukesDB();
+12: Searchable foundItem = theDB.findItem(theSKU);
+13: int theId = foundItem.getItemID();
+14: %>
+15: <H2><%=foundItem.getDescription()%></H2>
+
+
+An error occurred at line: 25 in the jsp file: /displayItemDetail.jsp
+theDB cannot be resolved
+22: 
+23: String order = request.getParameter("orders");
+24: if (order!=null) {
+25:     theDB.removeItem(theSKU, Integer.parseInt(order));
+26:     out.println("***********");
+27:     theDB.removeItem("120GR",4);
+28: }
+
+
+An error occurred at line: 27 in the jsp file: /displayItemDetail.jsp
+theDB cannot be resolved
+24: if (order!=null) {
+25:     theDB.removeItem(theSKU, Integer.parseInt(order));
+26:     out.println("***********");
+27:     theDB.removeItem("120GR",4);
+28: }
+29: 
+30: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:22:37 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /displayItemDetail.jsp
+Type mismatch: cannot convert from Object to DukesDB
+9: <%
+10: String theSKU = request.getParameter("SKU");
+11: //DukesDB theDB = new DukesDB();
+12: DukesDB theDB = session.getAttribute("dataSource");
+13: Searchable foundItem = theDB.findItem(theSKU);
+14: int theId = foundItem.getItemID();
+15: %>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:92)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:330)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:439)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:41:45 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:43:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:504)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:88)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:48:07 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:51:57 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:52:06 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:52:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:52:20 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:71)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:59:14 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:59:18 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 8:59:28 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 9:00:00 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+
+Aug 17, 2011 9:04:27 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet jsp threw exception
+java.lang.NullPointerException
+	at org.apache.jsp.displayItemDetail_jsp._jspService(displayItemDetail_jsp.java:74)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:386)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11AprProcessor.process(Http11AprProcessor.java:864)
+	at org.apache.coyote.http11.Http11AprProtocol$Http11ConnectionHandler.process(Http11AprProtocol.java:579)
+	at org.apache.tomcat.util.net.AprEndpoint$Worker.run(AprEndpoint.java:1665)
+	at java.lang.Thread.run(Thread.java:722)
+

@@ -1,0 +1,4 @@
+Aug 22, 2011 3:14:12 AM org.apache.catalina.core.ApplicationContext log
+INFO: SessionListener: contextDestroyed()
+Aug 22, 2011 3:14:12 AM org.apache.catalina.core.ApplicationContext log
+INFO: ContextListener: contextDestroyed()

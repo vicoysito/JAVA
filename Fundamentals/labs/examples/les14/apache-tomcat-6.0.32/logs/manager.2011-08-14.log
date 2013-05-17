@@ -1,0 +1,84 @@
+Aug 14, 2011 3:37:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 3:37:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 3:37:24 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:50:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 3:50:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 3:50:05 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:50:19 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:52:38 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 3:52:38 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 3:52:38 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:52:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:52:43 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:54:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 3:54:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 3:54:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:54:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:55:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 3:55:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 3:55:36 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:55:41 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:55:42 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 3:55:44 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:04:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 4:04:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 4:04:30 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:06:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:06:21 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: restart: Reloading web application at '/dukeschoice'
+Aug 14, 2011 4:06:21 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:13:02 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: restart: Reloading web application at '/dukeschoice'
+Aug 14, 2011 4:13:02 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:14:20 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 4:14:20 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 4:14:20 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:14:22 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:14:35 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: restart: Reloading web application at '/dukeschoice'
+Aug 14, 2011 4:14:35 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'
+Aug 14, 2011 4:14:47 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: sessions: Session action 'null' for web application at '/dukeschoice'
+Aug 14, 2011 4:14:54 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: sessions: Session action 'refreshSessions' for web application at '/dukeschoice'
+Aug 14, 2011 4:15:00 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: sessions: Session action 'null' for web application at '/dukeschoice'
+Aug 14, 2011 4:16:33 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Associated with Deployer 'Catalina:type=Deployer,host=localhost'
+Aug 14, 2011 4:16:33 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: init: Global resources are available
+Aug 14, 2011 4:16:33 AM org.apache.catalina.core.ApplicationContext log
+INFO: HTMLManager: list: Listing contexts for virtual host 'localhost'

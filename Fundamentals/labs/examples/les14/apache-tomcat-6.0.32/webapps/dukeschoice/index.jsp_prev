@@ -1,0 +1,63 @@
+<%@ page import = " java.util.*,duke.init.*,duke.item.*,duke.util.* " %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Apache Tomcat Examples</TITLE>
+<META http-equiv=Content-Type content="text/html">
+</HEAD>
+<BODY>
+<P>
+<H3>Apache Tomcat Examples</H3>
+<SCRIPT>
+
+function getItem(theSelect)
+{
+    window.location='http://localhost:8080/dukeschoice?selection=' + theSelect[theSelect.selectedIndex].value;
+}
+    
+</SCRIPT>
+
+<% 
+
+
+DukesDB theDB = new DukesDB();
+Searchable[] foundItemTypes = theDB.findUniqueItems();
+%>
+<select id="itemTypes" onChange="getItem(this);">
+<% for(Object element:foundItemTypes) { %>
+<option value="<%=((Searchable)element).getItemID()%>"><%=((Searchable)element).getDescription()%></option>
+<%} %>
+</select>
+
+
+
+<table border=0 cellpadding=4>
+<tr>
+<td>Choose!</td><td>SKU</td><td>Description</td><td>Price</td><td>Available</td></tr>
+<%
+String selection = (request.getParameter("selection"));
+if (selection!=null) {
+//{Integer.parseInt(selection));
+Searchable[] foundItems = theDB.findItems(Integer.parseInt(selection));
+%>
+<tr><td rowspan=<%=foundItems.length + 1%> valign="top">
+<form action="display.jsp">
+<select>
+<% for(Object element:foundItemTypes) { %>
+<option value="<%=((Searchable)element).getItemID()%>"><%=((Searchable)element).getDescription()%></option>
+<%} %>
+</select>
+</form></td>
+<%
+for (Searchable element: foundItems) {
+   //out.println(element.getSku() + " | " + element.getDescription() + "<br>");
+   out.println("<td><a href=\"displayItemDetail.jsp?SKU=" + element.getSku() + "\">" + element.getSku() + "</a></td>" +
+               "<td>" + element.getDescription() + "</td>" +
+               "<td>" + element.getPrice() + "</td>" +
+               "<td>" + element.getQuantityInStock() + "</td>" +
+               "</tr>" );
+}
+}
+
+%>
+</table>
+
+</BODY></HTML>
